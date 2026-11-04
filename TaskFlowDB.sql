@@ -142,7 +142,7 @@ GO
 INSERT INTO Usuario (codigo_usuario, nombres, apellidos, correo, contrasena, id_rol, id_empresa, id_departamento, id_puesto, id_jefe, fecha_ingreso, estado)
 VALUES (
     'ROOT-01', 'Administrador', 'Global', 'admin@taskflow.com',
-    CONVERT(VARCHAR(64), HASHBYTES('SHA2_256', 'superadmin123'), 2),
+    upper(CONVERT(VARCHAR(64), HASHBYTES('SHA2_256', 'superadmin123'), 2)),
     1, NULL, NULL, NULL, NULL, GETDATE(), 'Activo'
 );
 GO
